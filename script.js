@@ -1,5 +1,6 @@
 var altura = 0
 var largura = 0
+var vidas = 1 // variavem pára criar dinamicamente a o id das vidas
 
 function tamanhoDaTela(){
     altura = window.innerHeight
@@ -14,6 +15,15 @@ function posicaoRandomica(){
     //remover o mosquito caso exista
     if(document.getElementById('mosquito')) {
 		document.getElementById('mosquito').remove()
+
+        if (vidas > 3) {
+            alert('Game over')
+        }else{
+        
+        document.getElementById('v'+ vidas).src = "imagens/coracao_vazio.png"
+        
+        vidas++
+        }
 	}
 
     var horizontal = Math.floor(Math.random() * largura) - 90
@@ -31,6 +41,9 @@ function posicaoRandomica(){
     mosquito.style.top = vertical + 'px' // adiciona uma posição vertical aleatória
     mosquito.style.position = 'absolute' // coloca a imagem como absoluta
     mosquito.id = 'mosquito' //adiciondo id ao objeto mosquito
+    mosquito.onclick = function () {    //adicionando a função de clique no objeto
+        this.remove()
+    }
  
     document.body.appendChild(mosquito)
 
