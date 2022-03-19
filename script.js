@@ -2,14 +2,20 @@ var altura = 0
 var largura = 0
 
 function tamanhoDaTela(){
-    altura = innerHeight
-    largura = innerHeight
+    altura = window.innerHeight
+    largura = window.innerWidth
 
     console.log(altura, largura)
 }
 tamanhoDaTela()
 
 function posicaoRandomica(){
+
+    //remover o mosquito caso exista
+    if(document.getElementById('mosquito')) {
+		document.getElementById('mosquito').remove()
+	}
+
     var horizontal = Math.floor(Math.random() * largura) - 90
     var vertical = Math.floor(Math.random() * altura) - 90
 
@@ -24,6 +30,7 @@ function posicaoRandomica(){
     mosquito.style.left = horizontal + 'px' // adiciona uma posição  hotizontal aleatória
     mosquito.style.top = vertical + 'px' // adiciona uma posição vertical aleatória
     mosquito.style.position = 'absolute' // coloca a imagem como absoluta
+    mosquito.id = 'mosquito' //adiciondo id ao objeto mosquito
  
     document.body.appendChild(mosquito)
 
