@@ -10,8 +10,8 @@ function tamanhoDaTela(){
 tamanhoDaTela()
 
 function posicaoRandomica(){
-    var horizontal = Math.floor(Math.random() * largura)
-    var vertical = Math.floor(Math.random() * altura)
+    var horizontal = Math.floor(Math.random() * largura) - 90
+    var vertical = Math.floor(Math.random() * altura) - 90
 
     //criando elemento html
 
