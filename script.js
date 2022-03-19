@@ -1,7 +1,7 @@
 var altura = 0
 var largura = 0
 var vidas = 1 // variavem pára criar dinamicamente a o id das vidas
-var tempo = 10
+var tempo = 60
 
 function tamanhoDaTela(){
     altura = window.innerHeight
@@ -16,7 +16,7 @@ var cronometro = setInterval(function(){
     if (tempo < 0) {
         clearInterval(cronometro)
         clearInterval(criaMosquito)
-        alert('Vitoria')
+        window.location.href = 'vitoria.html'
     }else{
         document.getElementById('cronometro').innerHTML = tempo 
     }
