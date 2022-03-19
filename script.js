@@ -96,7 +96,7 @@ function ladoAleatorio(){
 function iniciarJogo() {
     var nivel = document.getElementById('nivel').value
     if (nivel == "") {
-        alert("selecione um nivel")
+        alert("Selecione um nivel")
         return false
     }
     window.location.href = 'jogo.html?' + nivel
