@@ -1,5 +1,7 @@
 body{
-    background-image: url(imagens/ bg.jpg);
+    
+    background-image: url(imagens/bg.jpg);
+    background-repeat: no-repeat;
 }
 
 .mosquito1{
@@ -19,4 +21,13 @@ body{
 }
 .ladoB{
     transform: scaleX(-1);
+}
+.painel{
+    position: absolute;
+    width: 190px;
+    padding: 10px;
+    bottom: 0px;
+    border-top: 1px solid white;
+    background-color:  white;
+    opacity: 0.7;
 }
