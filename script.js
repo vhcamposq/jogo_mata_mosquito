@@ -2,6 +2,18 @@ var altura = 0
 var largura = 0
 var vidas = 1 // variavem pára criar dinamicamente a o id das vidas
 var tempo = 60
+var tempoMosquito = 1500
+
+var nivel = window.location.search
+
+nivel = nivel.replace('?','') // codigo de seleção de dificuldade
+if (nivel === 'normal') {
+    var tempoMosquito = 1500
+}else if(nivel === 'dificil'){
+    var tempoMosquito = 1000
+}else if(nivel === 'insano'){
+    var tempoMosquito = 750
+}
 
 function tamanhoDaTela(){
     altura = window.innerHeight
@@ -80,6 +92,14 @@ function ladoAleatorio(){
     } else{
         return 'ladoB'
     }
+}
+function iniciarJogo() {
+    var nivel = document.getElementById('nivel').value
+    if (nivel == "") {
+        alert("selecione um nivel")
+        return false
+    }
+    window.location.href = 'jogo.html?' + nivel
 }
 
 
