@@ -1,3 +1,7 @@
+body{
+    background-image: url(imagens/ bg.jpg);
+}
+
 .mosquito1{
     height: 50px;
     width: 50px;
