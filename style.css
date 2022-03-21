@@ -1,3 +1,5 @@
+
+
 html{
    cursor: url(imagens/mata_moscas.png) 30 30, auto; 
 }
@@ -6,6 +8,8 @@ body{
     background-image: url(imagens/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    font-family: 'Bebas Neue', cursive;
+    font-family: 'Josefin Sans', sans-serif;
 }
 
 .mosquito1{
