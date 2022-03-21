@@ -1,5 +1,5 @@
 html{
-   cursor: url(imagens/mata_mosquito.png) 30 30, auto; 
+   cursor: url(imagens/mata_moscas.png) 30 30, auto; 
 }
 body{
     
@@ -30,11 +30,11 @@ body{
     position: absolute;
     width: 190px;
     padding: 10px;
-    bottom: 0px;
+    top: 0px;
     left: 0px;
     border-top: 1px solid white;
     background-color:  white;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 .vidas{
     float: left;
@@ -43,4 +43,18 @@ body{
     float: left;
     font-size: 20px;
     font-weight: bold;
+}
+.logo{
+    width: 650px;
+
+
+}
+.game-over{
+    width: 600px;
+}
+.cheio{
+    width: 30px;
+}
+.venceu{
+    width: 600px;
 }
